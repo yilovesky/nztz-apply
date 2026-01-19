@@ -1,10 +1,10 @@
-# 使用 Debian 版本的镜像以便安装系统工具
-FROM node:22-bullseye-slim
+# 使用 Debian 版本的镜像以便安装系统工具  ← 注释掉或删除这行说明
+FROM node:22-alpine
 
-# 安装脚本运行所需的工具
-RUN apt-get update && \
-    apt-get install -y curl unzip python3 && \
-    rm -rf /var/lib/apt/lists/*
+# 安装脚本运行所需的工具（Alpine 用 apk）
+RUN apk update --no-cache && \
+    apk add --no-cache curl unzip python3 py3-pip && \
+    rm -rf /var/cache/apk/*
 
 WORKDIR /app
 
