@@ -1,0 +1,19 @@
+{
+  "name": "nodejs-argo",
+  "version": "1.0.0",
+  "description": "This is a node project",
+  "main": "index.js",
+  "author": "eooce",
+  "license": "MIT",
+  "scripts": {
+    "start": "sh ./start.sh",
+    "build": "echo 'No build needed'"
+  },
+  "dependencies": {
+    "axios": "latest",
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
